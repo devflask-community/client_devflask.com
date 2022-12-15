@@ -1,6 +1,44 @@
 <div class="navbar">
     <div class="navbar_title">
-        <img class="navbar_title_logo" src="/public/assets/logo.svg" alt="" srcset="">
-        <h1 class="navbar_title_text">devflask.com</h1>
+        <div class="navbar_title_container hyperdiv" href="/">
+            <img class="navbar_title_container_logo unselectable" src="/public/assets/logo.svg" alt="" srcset="">
+            <h1 class="navbar_title_container_text unselectable">devflask.com</h1>
+            <div class="navbar_title_container_tooltip">
+                <span class="arrow">◀</span>
+                <p>definition: <b>Uniform Resource Locator</b> (<span>URL</span>)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar_arraystart"><p class="unselectable">[</p></div>
+
+    <div class="navbar_links">
+        <div class="navbar_links_item hyperdiv" href="/">
+            <p class="navbar_links_item_title unselectable">'<span>home</span>'</p>
+            <p class="navbar_links_item_end unselectable">,</p>
+        </div>
+        <div class="navbar_links_item hyperdiv" href="/about">
+            <p class="navbar_links_item_title unselectable">'<span>about</span>'</p>
+            <p class="navbar_links_item_end unselectable">,</p>
+        </div>
+        <div class="navbar_links_item hyperdiv" href="/projects">
+            <p class="navbar_links_item_title unselectable">'<span>projects</span>'</p>
+        </div>
+    </div>
+
+    <div class="navbar_arrayend"><p class="unselectable"><span class="navbar_arrayend_expand">...</span> ];</p></div>
+
+    <div class="navbar_profile">
+        <p class="navbar_profile_name hyperdiv" href="/login" >login()</p>
+        <img class="navbar_profile_picture" src="/public/assets/user.svg">
     </div>
 </div>
+
+<script>
+    var a = document.querySelectorAll('.navbar_links_item_title span')
+    a.forEach(element => {
+        if('<%- pageTitle %>'.toLowerCase() === element.innerHTML.toLocaleLowerCase()){
+            element.parentElement.classList.add('selected')
+        }
+    })
+</script>
