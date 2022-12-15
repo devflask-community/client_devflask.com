@@ -117,7 +117,7 @@ p {
   display: none;
 }
 .navbar_links {
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
 }
 .navbar_links_item {
   display: grid;
